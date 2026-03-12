@@ -1,0 +1,30 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0.0",
+	"FriendlyName": "ReGraphDialogue",
+	"Description": "Dialogue system built on top of ReGraphBase for branching and tangled conversations.",
+	"Category": "Gameplay",
+	"CreatedBy": "Ragberr",
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"Installed": false,
+	"Plugins": [
+		{
+			"Name": "ReGraphBase",
+			"Enabled": true
+		}
+	],
+	"Modules": [
+		{
+			"Name": "ReGraphDialogueRuntime",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "ReGraphDialogueEditor",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
+		}
+	]
+}
