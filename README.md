@@ -1,10 +1,10 @@
 # Jawia
 
-Jawia is a personal Unreal Engine 5.7 RPG prototype built around systemic gameplay rather than a single isolated feature. The project combines exploration, party management, turn-based combat, dialogue tooling, itemization, save/load persistence, occult progression, and gesture-based ritual input.
+Jawia is a prototype built around systemic gameplay rather than a single isolated feature. The project combines exploration, party management, turn-based combat, dialogue tooling, itemization, save/load persistence, occult progression, and gesture-based ritual input.
 
-Most of the reusable engineering work lives in custom C++ plugins, while Blueprints are used to wire those systems into game content, UI, encounters, and moment-to-moment player flow. The repository contains roughly 17k lines of custom C++ across the game module and the non-third-party plugins.
+Most of the reusable engineering work lives in custom C++ plugins, while Blueprints are used to wire those systems into game content, UI, encounters, and moment-to-moment player flow.
 
-`Plugins/SPUD` is included in the repository as a third-party save system dependency and is not my code. The custom work in this project is concentrated in the game module and the plugins listed below.
+`Plugins/SPUD` is included in the repository as a third-party save system dependency.
 
 ## Project Focus
 
@@ -58,39 +58,19 @@ A runtime plugin for gesture/rune recognition.
 
 Outside the plugins, the project contains Blueprint/gameplay content for:
 
-- Playable characters and party members such as `Luse` and `Mark`
 - Encounter and enemy content
 - Main menu, inventory, party, and combat UI
 - Interaction systems
 - Ritual-related input mappings
 - Weather and world systems
 
-The root `Source/Jawia` module is intentionally lightweight compared to the plugin layer. The architecture is plugin-first, with project content assembling those systems into a playable prototype.
-
-## Tech Stack
-
-- Unreal Engine 5.7
-- C++
-- Blueprints
-- Enhanced Input
-- CommonUI
-- Gameplay Tags
-- Level Sequence
-- SPUD for persistence integration
-
-## Why This Repo Matters
-
-This project is where I focused on systems engineering in Unreal rather than only level scripting or UI assembly. It shows how I structure gameplay features into reusable runtime/editor modules, expose them cleanly to designers, and connect persistence, combat, dialogue, inventory, and world-state systems into one project.
-
 ## Running The Project
 
 1. Use Unreal Engine 5.7.
 2. Open `Jawia.uproject`.
 3. Let Unreal generate project files and build the C++ modules if prompted.
-4. The default map is set in `Config/DefaultEngine.ini` and currently points to `/Game/NewMap.NewMap`.
 
 ## Repository Notes
 
 - This is an active prototype, so some content names and assets are still work-in-progress.
 - The strongest engineering work is in the custom plugins rather than the small root game module.
-- For portfolio or CV review, the most important part of this repository is the custom systems layer: combat, persistence, dialogue tooling, itemization, and gesture recognition.
