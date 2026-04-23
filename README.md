@@ -61,7 +61,6 @@ Outside the plugins, the project contains Blueprint/gameplay content for:
 - Encounter and enemy content
 - Main menu, inventory, party, and combat UI
 - Interaction systems
-- Ritual-related input mappings
 - Weather and world systems
 
 ## Running The Project
